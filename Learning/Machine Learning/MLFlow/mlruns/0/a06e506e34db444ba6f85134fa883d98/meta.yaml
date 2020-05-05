@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/armando_galeana/Documents/GitHub/Ubhuru/MLFlow/scikit_learn_E2E/mlruns/0/a06e506e34db444ba6f85134fa883d98/artifacts
+end_time: 1581181048285
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: a06e506e34db444ba6f85134fa883d98
+run_uuid: a06e506e34db444ba6f85134fa883d98
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1581181047139
+status: 3
+tags: []
+user_id: Armando_Galeana
