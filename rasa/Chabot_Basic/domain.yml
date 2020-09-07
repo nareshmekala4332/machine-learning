@@ -1,0 +1,123 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- goodbye
+- greet
+- thanks
+- affirm
+- deny
+- Facilities
+- Loans
+- customer_enquiry
+- balance_enquiry
+- affirm or thanks
+- mood_unhappy
+- mood_great
+- bot_challenge
+- enter_loanid
+- enter_paymentid
+- enter_custid
+- Payments
+- Statements
+- enter_facilityid
+- enter_facilityid_temp
+- enter_custid_temp
+- input_giving
+entities:
+- id
+slots:
+  id:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey! What can I do for you?
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: I hope that solved your query
+  utter_goodbye:
+  - text: Bye
+  utter_default:
+  - text: I am sorry, I didn't get that. Could you please repeat your query?
+  - text: I am not sure what you are aiming for.
+  utter_gratitude:
+  - text: "Glad that I could be of help to you!\nBye"
+  utter_ask_again:
+  - text: Okay! Let's start again, please tell me what do you need?
+  - text: "No issues! Let's try this again.\n Please repeat your query?"
+  utter_custid_input:
+  - text: Please enter your Customer ID
+  utter_facid_input:
+  - text: Please enter your Facility ID
+  utter_custid_input_given:
+  - text: 'Given : {id}'
+  utter_one_moment:
+  - text: One moment, Please..
+  utter_contact:
+  - text: 'We are currently not able to process your query. Please try again after
+      sometime or login in IPortal and check or contact to customer care : 1234567890'
+  utter_welcome_note:
+  - image: https://1000logos.net/wp-content/uploads/2016/10/Barclays-Logo-500x250.png
+    text: Hello, Welcome B-Chat.
+  utter_start_chat:
+  - buttons:
+    - payload: /Facilities
+      title: Facilities
+    - payload: /Loans
+      title: Loans
+    - payload: /Statements
+      title: Statements
+    - payload: /Payments
+      title: Payments
+    text: Which information can I give you Sir?
+  utter_facilities:
+  - buttons:
+    - payload: /enter_custid
+      title: Facilities By Customer
+    - payload: /enter_facilityid
+      title: Facilities By FacilityID
+    text: How do can I give you Facility information? Please select the below.
+  utter_loans:
+  - buttons:
+    - payload: /enter_custid
+      title: Loans By Customer
+    - payload: /enter_facilityid
+      title: Loans By FacilityID
+    text: How do can I give you Loans information? Please select the below.
+  utter_statements:
+  - buttons:
+    - payload: /enter_custid
+      title: Statements By Customer
+    - payload: /enter_facilityid
+      title: Statements By FacilityID
+    text: How do can I give you Statements information? Please select the below.
+  utter_payments:
+  - buttons:
+    - payload: /enter_custid
+      title: Payments By Customer
+    - payload: /enter_facilityid
+      title: Payments By FacilityID
+    - payload: /enter_loanid
+      title: Payments By Loan Id
+    text: How do can I give you Payments information? Please select the below.
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_goodbye
+- utter_default
+- utter_gratitude
+- utter_ask_again
+- action_facility_enquiry_custid
+- utter_custid_input
+- utter_contact
+- utter_welcome_note
+- utter_payments
+- utter_statements
+- utter_loans
+- utter_facilities
+- action_loans_enquiry_custid
+- action_facility_enquiry_facid
+- action_loans_enquiry_facid
+- utter_start_chat
+- utter_custid_input_given
+- utter_one_moment
